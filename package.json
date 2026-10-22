@@ -2,7 +2,12 @@
  "name": "ci-cd-kata",
  "version": "1.0.0",
  "scripts": {
- "test": "node test.js",
- "lint": "eslint . --max-warnings=0"
+  "test": "node test.js",
+  "lint": "eslint . --max-warnings=0"
+ },
+ "devDependencies": {
+  "@eslint/js": "^9.39.5",
+  "eslint": "^9.39.5",
+  "globals": "^17.13.0"
  }
 }
