@@ -26,3 +26,16 @@ jobs:
 
       - name: Run tests
         run: npm test
+      
+      - name: Prepare production files
+        run: |
+          mkdir -p dist
+          cp app.js package.json package-lock.json dist/
+
+      - name: Upload production artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-cd-kata-production
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
